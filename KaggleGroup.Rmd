@@ -85,7 +85,7 @@ It has two columns one with Id's of individual houses and other the predicted va
 ## 3. Exploring  some of the most important variables.
 ### 3.1 The response variable : Sales price
 ```{r}
-
+# load the scale library
 library(scales) 
 
 #Histogram plot of SalePrice of train data set
@@ -109,6 +109,7 @@ cat('There are', length(numericVars), 'numeric variables')
 ### 3.2.1 Correlations with SalePrice
 
 ```{r}
+# load library
 library(corrplot)
 
 train_numVar <- train[, numericVars]
@@ -141,6 +142,7 @@ ggplot(data=train[!is.na(train$SalePrice),], aes(x=factor(OverallQual), y=SalePr
 The numeric variable with the second highest correlation with SalesPrice is the Above Grade Living Area. This make a lot of sense; big houses are generally more expensive.
 
 ```{r}
+# load library
 library(ggrepel)
 
 ggplot(data=train[!is.na(train$SalePrice),], aes(x=GrLivArea, y=SalePrice))+
