@@ -97,6 +97,7 @@ ggplot(data=train[!is.na(train$SalePrice),], aes(x=SalePrice)) +
 we can see, the sale prices are right skewed. This was expected as few people can afford very expensive houses.
 
 ```{r}
+# summary of saleprice in train data
 summary(train$SalePrice)
 ```
 ### 3.2 The most important numeric predictors
